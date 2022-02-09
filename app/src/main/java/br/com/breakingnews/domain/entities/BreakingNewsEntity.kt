@@ -8,7 +8,8 @@ data class BreakingNewsEntity(
     val title: String,
     val description: String,
     val author: String,
-    val urlToImage: String
+    val urlToImage: String,
+    val url: String
 ) {
 
     companion object {
@@ -20,7 +21,8 @@ data class BreakingNewsEntity(
                     title = article.title,
                     description = article.description,
                     author = article.author ?: "Autor Desconhecido",
-                    urlToImage = article.urlToImage
+                    urlToImage = article.urlToImage,
+                    url = article.url
                 )
             }
         }
@@ -34,6 +36,7 @@ data class BreakingNewsEntity(
                     description = obj.description,
                     author = obj.author,
                     urlToImage = obj.urlToImage,
+                    url = obj.url
                 )
             }
         }

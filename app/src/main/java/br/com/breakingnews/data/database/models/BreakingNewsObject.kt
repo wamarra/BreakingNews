@@ -15,6 +15,7 @@ data class BreakingNewsObject constructor(
     var description: String = "",
     var author: String = "",
     var urlToImage: String = "",
+    var url: String = "",
     var created_at: String = getCurrentDate()
 ): Serializable {
 
@@ -32,7 +33,8 @@ data class BreakingNewsObject constructor(
                 title = entity.title,
                 description = entity.description,
                 author = entity.author,
-                urlToImage = entity.urlToImage
+                urlToImage = entity.urlToImage,
+                url = entity.url
             )
         }
     }
