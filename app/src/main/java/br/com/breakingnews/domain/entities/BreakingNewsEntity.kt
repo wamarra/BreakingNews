@@ -16,11 +16,12 @@ data class BreakingNewsEntity(
 
         fun mapper(data: List<Article>): List<BreakingNewsEntity> {
             return data.map { article ->
+                println(article.author)
                 BreakingNewsEntity(
                     id = article.title.hashCode().toString(),
                     title = article.title,
                     description = article.description,
-                    author = article.author ?: "Autor Desconhecido",
+                    author = article.author ?: "Autor desconhecido",
                     urlToImage = article.urlToImage,
                     url = article.url
                 )
