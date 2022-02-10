@@ -20,9 +20,9 @@ data class BreakingNewsEntity(
                 BreakingNewsEntity(
                     id = article.title.hashCode().toString(),
                     title = article.title,
-                    description = article.description,
+                    description = article.description ?: article.title,
                     author = article.author ?: "Autor desconhecido",
-                    urlToImage = article.urlToImage,
+                    urlToImage = article.urlToImage ?: article.url,
                     url = article.url
                 )
             }
